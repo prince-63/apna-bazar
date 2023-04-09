@@ -351,8 +351,17 @@ section{
     margin-bottom: 2rem;
 }
 
+.products .swiper_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+}
+
 .products .product-slider .box{
     background: #fff;
+    width: 330px;
     border-radius: .5rem;
     text-align: center;
     padding:3rem 2rem;
@@ -431,7 +440,15 @@ section{
     padding:1rem;
 }
 
+.review .swiper_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px;
+}
+
 .review .review-slider .box{
+    width: 300px;
     background: #fff;
     border-radius: .5rem;
     text-align: center;
