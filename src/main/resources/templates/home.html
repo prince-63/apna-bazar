@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     <!-- custom css file link  -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
 
 </head>
 
@@ -45,21 +45,21 @@
         <div class="box-container">
 
             <div class="box">
-                <img src="image/feature-img-1.png" alt="">
+                <img src="/assets/images/feature-img-1.png" alt="">
                 <h3>fresh and organic</h3>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt, earum!</p>
                 <a href="#" class="btn">read more</a>
             </div>
 
             <div class="box">
-                <img src="image/feature-img-2.png" alt="">
+                <img src="/assets/images/feature-img-2.png" alt="">
                 <h3>free delivery</h3>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt, earum!</p>
                 <a href="#" class="btn">read more</a>
             </div>
 
             <div class="box">
-                <img src="image/feature-img-3.png" alt="">
+                <img src="/assets/images/feature-img-3.png" alt="">
                 <h3>easy payments</h3>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt, earum!</p>
                 <a href="#" class="btn">read more</a>
@@ -81,10 +81,10 @@
             <!-- Additional required wrapper -->
             <div class="swiper_wrapper">
                 <!-- Slides -->
-                <div th:each="Product: ${productList}" class="swiper-slide box">
-                    <img th:src="${Product.imageLink}" alt="">
-                    <h3 th:text="${Product.name}"></h3>
-                    <div th:text="'$' + ${Product.price}" class="price"></div>
+                <div th:each="product: ${productList}" class="swiper-slide box">
+                    <img th:src="${product.productImageLink}" alt="${product.productImageLink}">
+                    <h3 th:text="${product.productName}"></h3>
+                    <div th:text="'$' + ${product.productPrice}" class="price"></div>
                     <div class="stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -92,7 +92,7 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star-half-alt"></i>
                     </div>
-                    <a th:href="@{/products(id=${Product.id})}" class="btn">add to cart</a>
+                    <a th:href="@{/products(id=${product.productId})}" class="btn">add to cart</a>
                 </div>
             </div>
         </div>
@@ -109,28 +109,28 @@
         <div class="box-container">
 
             <div class="box">
-                <img src="image/cat-1.png" alt="">
+                <img src="/assets/images/cat-1.png" alt="">
                 <h3>vegitables</h3>
                 <p>upto 45% off</p>
                 <a href="#" class="btn">shop now</a>
             </div>
 
             <div class="box">
-                <img src="image/cat-2.png" alt="">
+                <img src="/assets/images/cat-2.png" alt="">
                 <h3>fresh fruits</h3>
                 <p>upto 45% off</p>
                 <a href="#" class="btn">shop now</a>
             </div>
 
             <div class="box">
-                <img src="image/cat-3.png" alt="">
+                <img src="/assets/images/cat-3.png" alt="">
                 <h3>dairy products</h3>
                 <p>upto 45% off</p>
                 <a href="#" class="btn">shop now</a>
             </div>
 
             <div class="box">
-                <img src="image/cat-4.png" alt="">
+                <img src="/assets/images/cat-4.png" alt="">
                 <h3>fresh meat</h3>
                 <p>upto 45% off</p>
                 <a href="#" class="btn">shop now</a>
@@ -153,7 +153,7 @@
             <div class="swiper_wrapper">
 
                 <div class="swiper-slide box">
-                    <img src="image/pic-1.png" alt="">
+                    <img src="/assets/images/pic-1.png" alt="">
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde sunt fugiat dolore ipsum id est
                         maxime ad tempore quasi tenetur.</p>
                     <h3>john deo</h3>
@@ -167,7 +167,7 @@
                 </div>
 
                 <div class="swiper-slide box">
-                    <img src="image/pic-2.png" alt="">
+                    <img src="/assets/images/pic-2.png" alt="">
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde sunt fugiat dolore ipsum id est
                         maxime ad tempore quasi tenetur.</p>
                     <h3>john deo</h3>
@@ -181,7 +181,7 @@
                 </div>
 
                 <div class="swiper-slide box">
-                    <img src="image/pic-3.png" alt="">
+                    <img src="/assets/images/pic-3.png" alt="">
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde sunt fugiat dolore ipsum id est
                         maxime ad tempore quasi tenetur.</p>
                     <h3>john deo</h3>
@@ -195,7 +195,7 @@
                 </div>
 
                 <div class="swiper-slide box">
-                    <img src="image/pic-4.png" alt="">
+                    <img src="/assets/images/pic-4.png" alt="">
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde sunt fugiat dolore ipsum id est
                         maxime ad tempore quasi tenetur.</p>
                     <h3>john deo</h3>
@@ -225,7 +225,7 @@
         <div class="box-container">
 
             <div class="box">
-                <img src="image/blog-1.jpg" alt="">
+                <img src="/assets/images/blog-1.jpg" alt="">
                 <div class="content">
                     <div class="icons">
                         <a href="#"> <i class="fas fa-user"></i> by user </a>
@@ -238,7 +238,7 @@
             </div>
 
             <div class="box">
-                <img src="image/blog-2.jpg" alt="">
+                <img src="/assets/images/blog-2.jpg" alt="">
                 <div class="content">
                     <div class="icons">
                         <a href="#"> <i class="fas fa-user"></i> by user </a>
@@ -251,7 +251,7 @@
             </div>
 
             <div class="box">
-                <img src="image/blog-3.jpg" alt="">
+                <img src="/assets/images/blog-3.jpg" alt="">
                 <div class="content">
                     <div class="icons">
                         <a href="#"> <i class="fas fa-user"></i> by user </a>
@@ -273,7 +273,7 @@
     <!-- //footer block -->
 
     <!-- custom js file link  -->
-    <script src="js/script.js"></script>
+    <script src="/assets/js/script.js"></script>
 </body>
 
 </html>

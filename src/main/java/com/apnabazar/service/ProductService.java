@@ -1,12 +1,12 @@
-package com.learn.service;
+package com.apnabazar.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.learn.model.Product;
-import com.learn.repository.ProductRepository;
+import com.apnabazar.model.Product;
+import com.apnabazar.repository.ProductRepository;
 
 @Service
 public class ProductService {
@@ -15,7 +15,7 @@ public class ProductService {
     private ProductRepository productRepository;
     
     public List<Product> getAllProduct() {
-        return productRepository.getAllProduct();
+        return productRepository.findAll();
     }
     
 }

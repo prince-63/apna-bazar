@@ -1,0 +1,59 @@
+<!-- Hello World -->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apna Bazar</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body>
+    <!-- header -->
+    <div th:replace="~{header :: header}">...</div>
+    <!-- //header -->
+
+    <!-- products section starts  -->
+
+    <section class="products" style="margin-top: 60px;" id="products">
+
+        <div class="swiper product-slider">
+            <!-- Additional required wrapper -->
+            <div class="swiper_wrapper">
+                <!-- Slides -->
+                <div th:each="product: ${productList}" class="swiper-slide box">
+                    <img th:src="${product.productImageLink}" alt="">
+                    <h3 th:text="${product.productName}"></h3>
+                    <div th:text="'$' + ${product.productPrice}" class="price"></div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <a th:href="@{/products(id=${product.productId})}" class="btn">add to cart</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- products section ends -->
+
+    <!-- footer block -->
+    <div th:replace="~{footer :: footer}">...</div>
+    <!-- //footer block -->
+
+    <!-- custom js file link  -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>

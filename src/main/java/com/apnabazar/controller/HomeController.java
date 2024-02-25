@@ -1,4 +1,4 @@
-package com.learn.controller;
+package com.apnabazar.controller;
 
 import java.util.List;
 
@@ -7,8 +7,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.learn.model.Product;
-import com.learn.service.ProductService;
+import com.apnabazar.model.Product;
+import com.apnabazar.service.ProductService;
 
 import org.springframework.ui.Model;
 
